@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_alm_documents</name>
+    <creationDate>2016-01-17</creationDate>
+    <copyright>© 2016. Все права защищены.</copyright>
+    <license>GNU General Public License версии 2 или более поздней; Смотрите LICENSE.txt</license>
+    <author>Alexander</author>
+    <authorEmail>jakimov_alex@mail.ru</authorEmail>
+    <authorUrl>http://</authorUrl>
+    <version>CVS: 1.0.0</version>
+    <description>База документов</description>
+    
+    
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>alm_documents.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+    </files>
+    <media destination="com_alm_documents" folder="media">
+        <folder>js</folder>
+        <folder>css</folder>
+    </media>
+    <languages folder="languages/site">
+        
+			<language tag="en-GB">en-GB/en-GB.com_alm_documents.ini</language>
+			<language tag="ru-RU">ru-RU/ru-RU.com_alm_documents.ini</language>
+    </languages>
+    <administration>
+        <menu img="media/com_alm_documents/images/s_com_alm_documents.png" >COM_ALM_DOCUMENTS</menu>
+        <submenu>
+            
+			<menu link="option=com_alm_documents&amp;view=documentstables" view="documentstables" img="media/com_alm_documents/images/s_documentstables.png" alt="Alm_documents/Documentstables">COM_ALM_DOCUMENTS_TITLE_DOCUMENTSTABLES</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>alm_documents.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="languages/administrator">
+            
+			<language tag="en-GB">en-GB/en-GB.com_alm_documents.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_alm_documents.sys.ini</language>
+			<language tag="ru-RU">ru-RU/ru-RU.com_alm_documents.ini</language>
+			<language tag="ru-RU">ru-RU/ru-RU.com_alm_documents.sys.ini</language>
+        </languages>
+    </administration>
+    <plugins>
+        <plugin group="search" plugin="alm_documents"/>
+    </plugins>
+    
+</extension>
+<!-- Component built by the Joomla Component Creator -->
+<!-- http://www.component-creator.com/ -->

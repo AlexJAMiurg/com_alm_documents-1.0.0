@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="COM_ALM_DOCUMENTS_FORM_LBL_DOCUMENTSTABLE_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="created_by" type="createdby" default="" 
+            label="COM_ALM_DOCUMENTS_FORM_LBL_DOCUMENTSTABLE_CREATED_BY"
+            description="COM_ALM_DOCUMENTS_FORM_DESC_DOCUMENTSTABLE_CREATED_BY"  /> 
+
+       <field name="sys_created_by" type="text"
+                
+            label="COM_ALM_DOCUMENTS_FORM_LBL_DOCUMENTSTABLE_SYS_CREATED_BY"
+            description="COM_ALM_DOCUMENTS_FORM_DESC_DOCUMENTSTABLE_SYS_CREATED_BY" 
+                
+                
+                
+            readonly="true"
+            filter="int" /> 
+
+       <field name="sys_created_at" type="text" size="40" class="inputbox"
+                                                    
+            label="COM_ALM_DOCUMENTS_FORM_LBL_DOCUMENTSTABLE_SYS_CREATED_AT"
+            description="COM_ALM_DOCUMENTS_FORM_DESC_DOCUMENTSTABLE_SYS_CREATED_AT" 
+                                                     default="0000-00-00 00:00:00" 
+                                                    
+                                                    
+                                                    filter="safehtml" /> 
+
+       <field name="sys_modified_by" type="text"
+                
+            label="COM_ALM_DOCUMENTS_FORM_LBL_DOCUMENTSTABLE_SYS_MODIFIED_BY"
+            description="COM_ALM_DOCUMENTS_FORM_DESC_DOCUMENTSTABLE_SYS_MODIFIED_BY" 
+                
+                
+                
+            readonly="true"
+            filter="int" /> 
+
+       <field name="sys_modified_at" type="calendar" class="inputbox"
+        
+        
+         default="0000-00-00 00:00:00" 
+        
+            label="COM_ALM_DOCUMENTS_FORM_LBL_DOCUMENTSTABLE_SYS_MODIFIED_AT"
+            description="COM_ALM_DOCUMENTS_FORM_DESC_DOCUMENTSTABLE_SYS_MODIFIED_AT" 
+        format=" %Y-%m-%d %H:%M:%S"
+        filter="safehtml" /> 
+
+       <field name="title" type="text"
+                
+            label="COM_ALM_DOCUMENTS_FORM_LBL_DOCUMENTSTABLE_TITLE"
+            description="COM_ALM_DOCUMENTS_FORM_DESC_DOCUMENTSTABLE_TITLE" 
+                
+                
+                
+            filter="string" /> 
+
+         <field
+        name="state"
+        type="list"
+        label="JSTATUS"
+        description="JFIELD_PUBLISHED_DESC"
+        class="inputbox"
+        size="1"
+        default="1">
+        <option value="1">JPUBLISHED</option>
+        <option value="0">JUNPUBLISHED</option>
+        <option value="2">JARCHIVED</option>
+        <option value="-2">JTRASHED</option>
+    </field> 
+
+                        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" />
+
+	</fieldset>
+
+</form>

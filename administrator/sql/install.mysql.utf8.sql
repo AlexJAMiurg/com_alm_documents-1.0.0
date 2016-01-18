@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS `#__alm_documents_table` (
 `checked_out_time` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
 `created_by` INT(11)  NOT NULL ,
 `sys_created_by` VARCHAR(255)  NOT NULL ,
-`sys_created_at` TIMESTAMP NOT NULL ,
+`sys_created_at` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
 `sys_modified_by` VARCHAR(255)  NOT NULL ,
 `sys_modified_at` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
 `title` VARCHAR(255)  NOT NULL ,

@@ -20,12 +20,12 @@
             readonly="true"
             filter="int" /> 
 
-       <field name="sys_created_at" type="text" size="40" class="inputbox"
+       <field name="sys_created_at" type="calendar" class="inputbox"
                                                     
             label="COM_ALM_DOCUMENTS_FORM_LBL_DOCUMENTSTABLE_SYS_CREATED_AT"
             description="COM_ALM_DOCUMENTS_FORM_DESC_DOCUMENTSTABLE_SYS_CREATED_AT" 
                                                      default="0000-00-00 00:00:00" 
-                                                    
+                                                    format=" %Y-%m-%d %H:%M:%S"
                                                     
                                                     filter="safehtml" /> 
 
